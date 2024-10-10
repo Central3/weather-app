@@ -7,12 +7,12 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Production",
-      template: "template.html",
+      title: "Weather Banter",
+      template: "src/template.html",
     }),
   ],
   output: {
-    filename: "[name].bundle.js",
+    filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
