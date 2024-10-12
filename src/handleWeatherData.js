@@ -66,7 +66,8 @@ async function processData(json) {
   console.log(myWeatherData);
 }
 
-export default async function displayWeather(location = "bangalore") {
+export default async function displayWeather(loc) {
+  const location = loc || "bangalore";
   const result = await getData(location);
   processData(result);
 }

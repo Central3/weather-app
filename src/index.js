@@ -1,4 +1,4 @@
-import displayWeather from "./handleWeatherData";
+import UIHandler from "./uiHandler";
 import "./style.css";
 
-displayWeather("london");
+UIHandler();
