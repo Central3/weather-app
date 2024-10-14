@@ -1,4 +1,4 @@
-import displayWeather from "./handleWeatherData";
+import displayWeather from "./displayWeather";
 
 const searchForm = document.querySelector(".search-form");
 const searchBtn = document.querySelector("#search-btn");

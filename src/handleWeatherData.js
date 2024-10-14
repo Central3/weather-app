@@ -1,6 +1,6 @@
-async function getData(location) {
+export async function getData(location) {
   const apiKey = "NQKN5AVWBNRCTF8RZJK8UMLCS";
-  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=${apiKey}`;
+  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=${apiKey}&unitGroup=metric`;
 
   try {
     const response = await fetch(url, { mode: "cors" });
@@ -34,7 +34,7 @@ async function getData(location) {
   }
 }
 
-async function processData(json) {
+export function processData(json) {
   if (!json) return;
 
   const {
@@ -63,11 +63,5 @@ async function processData(json) {
     windspeed,
   };
 
-  console.log(myWeatherData);
-}
-
-export default async function displayWeather(loc) {
-  const location = loc || "bangalore";
-  const result = await getData(location);
-  processData(result);
+  return myWeatherData;
 }
