@@ -1,6 +1,7 @@
-export async function getData(location) {
+export async function getData(location, isCelsiusSelected) {
   const apiKey = "NQKN5AVWBNRCTF8RZJK8UMLCS";
-  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=${apiKey}&unitGroup=metric`;
+  const unit = isCelsiusSelected ? "metric" : "us";
+  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=${apiKey}&unitGroup=${unit}`;
 
   try {
     const response = await fetch(url, { mode: "cors" });
