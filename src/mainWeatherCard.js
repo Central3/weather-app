@@ -1,6 +1,6 @@
 import { createElement, appendChildren } from "./domUtil";
 
-export default function renderCard(parentElement, data, isCelsiusSelected) {
+export default function renderMainCard(parentElement, data, isCelsiusSelected) {
   const containerFragment = document.createDocumentFragment();
 
   const container = createElement("div", { class: "weather-data card" });
