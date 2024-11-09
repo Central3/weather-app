@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Weather Banter</title>
+  </head>
+  <body>
+    <nav class="navigation-bar poppins-regular">
+      <div class="search-box">
+        <form class="search-form">
+          <input
+            type="search"
+            name="location"
+            id="location"
+            placeholder="Search for a location..."
+          />
+          <span class="material-icons btn" id="search-btn">search</span>
+        </form>
+      </div>
+      <button class="toggle-unit btn">
+        <span id="celsius-unit" class="select-unit">C</span>
+        /
+        <span id="fahrenheit-unit">F</span>
+      </button>
+    </nav>
+    <main class="poppins-regular"></main>
+  </body>
+</html>
