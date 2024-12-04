@@ -1,4 +1,4 @@
-import displayWeather from "./displayWeather";
+import displayData from "./displayData";
 
 const toggleBtn = document.querySelector(".toggle-unit");
 const celsius = document.querySelector("#celsius-unit");
@@ -11,6 +11,6 @@ export default function handleUnitToggleBtn() {
     const isCelsiusSelected = celsius.classList.toggle("select-unit");
     fahrenheit.classList.toggle("select-unit", !isCelsiusSelected);
 
-    displayWeather(searchedLocation, isCelsiusSelected);
+    displayData(searchedLocation, isCelsiusSelected);
   });
 }

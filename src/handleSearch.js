@@ -1,4 +1,4 @@
-import displayWeather from "./displayWeather";
+import displayData from "./displayData";
 
 const searchForm = document.querySelector(".search-form");
 const searchBtn = document.querySelector("#search-btn");
@@ -10,7 +10,7 @@ export default function handleSearch() {
 
     const searchedLocation = searchForm.querySelector("#location").value;
     const isCelsiusSelected = celsius.classList.contains("select-unit");
-    displayWeather(searchedLocation, isCelsiusSelected);
+    displayData(searchedLocation, isCelsiusSelected);
   }
 
   searchForm.addEventListener("submit", handleSubmit);

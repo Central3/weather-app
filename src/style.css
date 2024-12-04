@@ -195,7 +195,8 @@ main {
     hsla(285, 23%, 32%, 1) 23%,
     hsla(286, 16%, 43%, 1) 72%
   );
-  height: 95vh;
+  min-height: 95vh;
+  max-height: auto;
   padding: 12px 16px;
 }
 
@@ -271,4 +272,11 @@ main {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+/* map component style */
+#map {
+  height: 250px;
+  margin: 16px 0;
+  border-radius: 12px;
 }
