@@ -133,6 +133,7 @@ h6 {
   background-color: var(--english-violet);
   width: 30%;
   display: inline-block;
+  margin-right: 8px;
 }
 
 .search-box:focus-within {
