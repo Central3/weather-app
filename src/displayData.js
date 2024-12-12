@@ -1,4 +1,5 @@
 import { getData, processData } from "./handleWeatherData";
+import { createElement } from "./domUtil";
 import showExtendedForecast from "./showExtendedForecast";
 import renderMainCard from "./mainWeatherCard";
 import renderMap from "./mapRender";
@@ -8,6 +9,10 @@ const mainSection = document.querySelector("main");
 export default async function displayData(loc, isCelsiusSelected) {
   if (loc === "" || loc === undefined) return;
 
+  const loadingEle = createElement("span", { class: "loader" });
+
+  mainSection.textContent = "";
+  mainSection.appendChild(loadingEle);
   const data = await getData(loc, isCelsiusSelected);
   const result = processData(data);
 
